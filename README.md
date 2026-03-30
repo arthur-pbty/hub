@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hub ArthurP
 
-## Getting Started
+Hub centralisant les projets et outils d'ArthurP.
 
-First, run the development server:
+Le site regroupe des applications web (productivite, utilitaires, education, etc.) avec une page detaillee pour chaque projet, des pages legales, et les elements SEO (robots, sitemap, donnees structurees).
+
+## Site en production
+
+- URL officielle: https://arthurp.fr
+
+## Stack technique
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- ESLint
+
+## Fonctionnalites principales
+
+- Page d'accueil avec presentation des projets
+- Pages dediees par projet dans `src/app/projets/*`
+- Pages legales dans `src/app/legal/*`
+- SEO technique avec `public/robots.txt` et `src/app/sitemap.ts`
+- Donnees structurees JSON-LD via composant reutilisable
+
+## Installation locale
+
+Pre-requis:
+
+- Node.js 20+
+- npm
+
+Installation:
+
+```bash
+npm install
+```
+
+## Lancer le projet
+
+Developpement:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build de production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lancer le build en local:
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Lint:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts npm
 
-## Deploy on Vercel
+- `dev`: demarre le serveur Next.js en mode developpement
+- `build`: genere le build de production
+- `start`: demarre le serveur sur le build genere
+- `lint`: verifie la qualite du code avec ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure du projet
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+	app/
+		page.tsx
+		layout.tsx
+		globals.css
+		legal/
+		projets/
+		sitemap.ts
+	components/
+public/
+	robots.txt
+```
+
+## Publication GitHub
+
+Points importants avant push:
+
+- Ne jamais versionner de secrets ou credentials
+- Verifier que les fichiers d'environnement restent ignores (`.env*`)
+- Verifier que les configurations locales editeur/deploiement restent ignorees (`.vscode/`)
+
+## License
+
+Projet prive - tous droits reserves sauf mention contraire.
