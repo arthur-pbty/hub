@@ -43,6 +43,7 @@ export default function PomodoroInfo() {
       ]}
       images={["/placeholder-pomodoro.webp", "/placeholder-pomodoro-2.webp", "/placeholder-pomodoro-3.webp"]}
       url="https://pomodoro.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/pomodoro"
     />
   );
 }

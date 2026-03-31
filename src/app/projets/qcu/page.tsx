@@ -43,6 +43,7 @@ export default function QCUInfo() {
       ]}
       images={["/placeholder-qcu.webp", "/placeholder-qcu-2.webp", "/placeholder-qcu-3.webp"]}
       url="https://qcu.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/QCM_physique"
     />
   );
 }

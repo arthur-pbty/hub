@@ -43,6 +43,7 @@ export default function ClockInfo() {
       ]}
       images={["/placeholder-clock.webp", "/placeholder-clock-2.webp", "/placeholder-clock-3.webp"]}
       url="https://clock.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/clock"
     />
   );
 }

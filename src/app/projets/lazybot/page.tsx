@@ -44,6 +44,7 @@ export default function LazyBotInfo() {
       ]}
       images={["/placeholder-lazybot.webp", "/placeholder-lazybot-2.webp", "/placeholder-lazybot-3.webp"]}
       url="https://lazybot.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/LazyBot"
     />
   );
 }

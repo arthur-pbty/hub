@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import PastilleStatut from "@/components/PastilleStatut";
 
 interface FAQ {
   question: string;
@@ -17,6 +18,7 @@ interface ProjectInfoPageProps {
   faq?: FAQ[];
   images: string[];
   url: string;
+  githubUrl?: string;
 }
 
 export default function ProjectInfoPage({
@@ -29,6 +31,7 @@ export default function ProjectInfoPage({
   faq,
   images,
   url,
+  githubUrl,
 }: ProjectInfoPageProps) {
   return (
     <div className="min-h-screen bg-white font-sans text-zinc-900">
@@ -97,14 +100,28 @@ export default function ProjectInfoPage({
           </div>
         </div>
 
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block rounded-lg bg-[#e2d6c2] px-6 py-3 text-[#5a4a2e] font-medium hover:bg-[#d6bfa3] border border-[#d6bfa3] transition-colors"
-        >
-          {"Acc\u00e9der \u00e0 l\u2019outil"}
-        </a>
+
+        <div className="flex gap-4 mb-2 items-center">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-lg bg-[#e2d6c2] px-6 py-3 text-[#5a4a2e] font-medium hover:bg-[#d6bfa3] border border-[#d6bfa3] transition-colors"
+          >
+            {"Acc\u00e9der \u00e0 l\u2019outil"}
+          </a>
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg bg-zinc-900 px-6 py-3 text-white font-medium hover:bg-zinc-700 border border-zinc-800 transition-colors"
+            >
+              {"Voir sur GitHub"}
+            </a>
+          )}
+          <PastilleStatut url={url} />
+        </div>
 
         {longDescription && (
           <section className="mt-12">

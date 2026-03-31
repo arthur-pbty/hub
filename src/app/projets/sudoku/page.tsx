@@ -43,6 +43,7 @@ export default function SudokuProjectPage() {
       ]}
       images={["/placeholder-sudoku.webp", "/placeholder-sudoku-2.webp", "/placeholder-sudoku-3.webp"]}
       url="https://sudoku.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/sudoku"
     />
   );
 }

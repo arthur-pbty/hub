@@ -44,6 +44,7 @@ export default function BlocNoteInfo() {
       ]}
       images={["/placeholder-blocnote.webp", "/placeholder-blocnote-2.webp", "/placeholder-blocnote-3.webp"]}
       url="https://blocnote.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/blocnote"
     />
   );
 }

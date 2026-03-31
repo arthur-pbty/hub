@@ -43,6 +43,7 @@ export default function QRCodeInfo() {
       ]}
       images={["/placeholder-qrcode.webp", "/placeholder-qrcode-2.webp", "/placeholder-qrcode-3.webp"]}
       url="https://qrcode.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/qrcode"
     />
   );
 }

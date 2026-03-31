@@ -45,6 +45,7 @@ export default function FormCraftInfo() {
       ]}
       images={["/placeholder-formcraft.webp", "/placeholder-formcraft-2.webp", "/placeholder-formcraft-3.webp"]}
       url="https://form.arthurp.fr/"
+      githubUrl="https://github.com/arthur-pbty/form"
     />
   );
 }

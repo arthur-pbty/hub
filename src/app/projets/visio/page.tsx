@@ -43,6 +43,7 @@ export default function VisioInfo() {
       ]}
       images={["/placeholder-visio.webp", "/placeholder-visio-2.webp", "/placeholder-visio-3.webp"]}
       url="https://visio.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/visio"
     />
   );
 }

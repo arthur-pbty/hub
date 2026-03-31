@@ -43,6 +43,7 @@ export default function LearnInfo() {
       ]}
       images={["/placeholder-learn.webp", "/placeholder-learn-2.webp", "/placeholder-learn-3.webp"]}
       url="https://learn.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/learn"
     />
   );
 }

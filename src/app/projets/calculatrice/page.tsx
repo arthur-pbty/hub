@@ -43,6 +43,7 @@ export default function CalculatriceInfo() {
       ]}
       images={["/placeholder-calculatrice.webp", "/placeholder-calculatrice-2.webp", "/placeholder-calculatrice-3.webp"]}
       url="https://calculatrice.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/calculatrice"
     />
   );
 }

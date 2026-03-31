@@ -43,6 +43,7 @@ export default function Page() {
       ]}
       images={["/placeholder-reducelink.webp", "/placeholder-reducelink-2.webp", "/placeholder-reducelink-3.webp"]}
       url="https://reducelink.arthurp.fr/"
+      githubUrl="https://github.com/arthur-pbty/reducelink"
     />
   );
 }

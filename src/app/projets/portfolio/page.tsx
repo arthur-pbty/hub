@@ -44,6 +44,7 @@ export default function PortfolioInfo() {
       ]}
       images={["/placeholder-portfolio.webp", "/placeholder-portfolio-2.webp", "/placeholder-portfolio-3.webp"]}
       url="https://portfolio.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/portfolio"
     />
   );
 }

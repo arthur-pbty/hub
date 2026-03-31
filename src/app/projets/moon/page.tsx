@@ -44,6 +44,7 @@ export default function MoonInfo() {
       ]}
       images={["/placeholder-moon.webp", "/placeholder-moon-2.webp", "/placeholder-moon-3.webp"]}
       url="https://moon.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/moon"
     />
   );
 }

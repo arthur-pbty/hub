@@ -45,6 +45,7 @@ export default function ChronoInfo() {
       ]}
       images={["/placeholder-chrono.webp", "/placeholder-chrono-2.webp", "/placeholder-chrono-3.webp"]}
       url="https://chrono.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/chrono"
     />
   );
 }

@@ -43,6 +43,7 @@ export default function ImprimerSudokuInfo() {
       ]}
       images={["/placeholder-imprimersudoku.webp", "/placeholder-imprimersudoku-2.webp", "/placeholder-imprimersudoku-3.webp"]}
       url="https://imprimersudoku.arthurp.fr"
+      githubUrl="https://github.com/arthur-pbty/imprimersudoku"
     />
   );
 }
