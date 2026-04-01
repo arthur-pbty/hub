@@ -23,7 +23,7 @@ services:
     container_name: hub-prod
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3004:3000"
     env_file:
       - .env
     environment:

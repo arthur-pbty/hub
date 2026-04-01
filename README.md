@@ -1,99 +1,47 @@
 # Hub ArthurP
 
-Hub centralisant les projets et outils d'ArthurP.
+Hub centralisant tous les projets et outils d'ArthurP.
 
-Le site regroupe des applications web (productivite, utilitaires, education, etc.) avec une page detaillee pour chaque projet, des pages legales, et les elements SEO (robots, sitemap, donnees structurees).
+**URL officielle :** https://arthurp.fr
 
-## Site en production
+## Stack
 
-- URL officielle: https://arthurp.fr
+- Next.js 16 (App Router) + React 19
+- TypeScript + Tailwind CSS 4
+- SEO & JSON-LD structuré
 
-## Stack technique
-
-- Next.js 16 (App Router)
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- ESLint
-
-## Fonctionnalites principales
-
-- Page d'accueil avec presentation des projets
-- Pages dediees par projet dans `src/app/projets/*`
-- Pages legales dans `src/app/legal/*`
-- SEO technique avec `public/robots.txt` et `src/app/sitemap.ts`
-- Donnees structurees JSON-LD via composant reutilisable
-
-## Installation locale
-
-Pre-requis:
-
-- Node.js 20+
-- npm
-
-Installation:
+## Démarrage local
 
 ```bash
 npm install
+npm run dev      # Développement sur http://localhost:3000
+npm run build    # Build production
+npm run start    # Lancer le build
+npm run lint     # Vérifier le code
 ```
 
-## Lancer le projet
-
-Developpement:
+## Docker
 
 ```bash
-npm run dev
+docker compose --profile dev up --build    # Mode dev sur port 3000
+docker compose --profile prod up --build   # Mode prod sur port 3018
 ```
 
-Build de production:
+## Structure
 
-```bash
-npm run build
 ```
-
-Lancer le build en local:
-
-```bash
-npm run start
-```
-
-Lint:
-
-```bash
-npm run lint
-```
-
-## Scripts npm
-
-- `dev`: demarre le serveur Next.js en mode developpement
-- `build`: genere le build de production
-- `start`: demarre le serveur sur le build genere
-- `lint`: verifie la qualite du code avec ESLint
-
-## Structure du projet
-
-```text
 src/
-	app/
-		page.tsx
-		layout.tsx
-		globals.css
-		legal/
-		projets/
-		sitemap.ts
-	components/
+  app/
+    projets/        # Pages détaillées par projet
+    legal/          # Mentions, confidentialité, CGU
+    page.tsx        # Accueil avec liste des projets
+  components/       # Composants réutilisables
 public/
-	robots.txt
+  robots.txt, ...   # Assets publics
 ```
 
-## Publication GitHub
+## Notes
 
-Points importants avant push:
-
-- Ne jamais versionner de secrets ou credentials
-- Verifier que les fichiers d'environnement restent ignores (`.env*`)
-- Verifier que les configurations locales editeur/deploiement restent ignorees (`.vscode/`)
-
-## License
-
-Projet prive - tous droits reserves sauf mention contraire.
+- `.env*` et `.vscode/` sont ignorés (ne pas versionner de secrets)
+- Secrets internes à définir avant déploiement
+- Tous droits réservés © 2026
