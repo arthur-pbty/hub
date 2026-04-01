@@ -141,7 +141,7 @@ export default function Home() {
         <p className="mb-10 max-w-2xl text-center text-lg text-zinc-600">
           Découvre tous mes outils, projets et ressources en ligne : bots Discord, générateurs, QCM, linktree et plus encore. Un point d’accès unique pour tout ce que je développe et partage.
         </p>
-        <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="projets" className="grid w-full scroll-mt-24 grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div key={project.title} className="flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
               <Image

@@ -9,7 +9,7 @@ export default function Confidentialite() {
         </Link>
         <h1 className="text-2xl font-bold mb-4">Politique de confidentialité</h1>
         <p className="mb-2">Aucune donnée personnelle n’est collectée à des fins commerciales. Les outils proposés peuvent utiliser des cookies techniques pour le bon fonctionnement du site.</p>
-        <p className="mb-2">Aucune information n’est transmise à des tiers. Pour toute question, contactez-moi à contact [at] arthurp.fr.</p>
+        <p className="mb-2">Aucune information n’est transmise à des tiers. Pour toute question, contactez-moi via contact.arthurp.fr ou par e-mail à contact@arthurp.fr.</p>
       </main>
     </div>
   );

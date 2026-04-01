@@ -65,13 +65,41 @@ export default function RootLayout({
           <div className="flex-1">
             {children}
           </div>
-          <footer className="w-full border-t border-zinc-200 bg-zinc-50 py-4 text-center text-sm text-zinc-500">
-            <nav aria-label="Liens légaux" className="flex flex-wrap justify-center gap-4">
-              <Link href="/legal/mentions-legales" className="hover:underline">Mentions légales</Link>
-              <Link href="/legal/confidentialite" className="hover:underline">Confidentialité</Link>
-              <Link href="/legal/cgu" className="hover:underline">CGU</Link>
-            </nav>
-            <div className="mt-2">© {new Date().getFullYear()} ArthurP</div>
+          <footer className="w-full border-t border-zinc-200 bg-zinc-50">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-12 text-sm text-zinc-600 md:grid-cols-3">
+              <div>
+                <h2 className="text-base font-semibold text-zinc-900">Navigation</h2>
+                <nav aria-label="Navigation principale" className="mt-4 flex flex-col gap-2">
+                  <Link href="/" className="hover:text-zinc-900 hover:underline">Accueil</Link>
+                  <Link href="/#projets" className="hover:text-zinc-900 hover:underline">Projets</Link>
+                  <a href="https://contact.arthurp.fr" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 hover:underline">Contact</a>
+                </nav>
+              </div>
+
+              <div>
+                <h2 className="text-base font-semibold text-zinc-900">ArthurP.fr</h2>
+                <div className="mt-4 flex flex-col gap-2">
+                  <a href="https://arthurp.fr" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 hover:underline">arthurp.fr</a>
+                  <a href="https://github.com/arthur-pbty" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 hover:underline">GitHub</a>
+                  <a href="mailto:contact@arthurp.fr" className="hover:text-zinc-900 hover:underline">contact@arthurp.fr</a>
+                  <a href="https://contact.arthurp.fr" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 hover:underline">contact.arthurp.fr</a>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-base font-semibold text-zinc-900">Légal</h2>
+                <nav aria-label="Liens légaux" className="mt-4 flex flex-col gap-2">
+                  <Link href="/legal/mentions-legales" className="hover:text-zinc-900 hover:underline">Mentions légales</Link>
+                  <Link href="/legal/confidentialite" className="hover:text-zinc-900 hover:underline">Confidentialité</Link>
+                  <Link href="/legal/cgu" className="hover:text-zinc-900 hover:underline">CGU</Link>
+                </nav>
+              </div>
+            </div>
+
+            <div className="border-t border-zinc-200 px-6 py-5 text-center text-sm text-zinc-500">
+              <p>© {new Date().getFullYear()} Arthur P. Tous droits réservés.</p>
+              <p className="mt-1">Fait avec passion et auto-hébergé sur Proxmox.</p>
+            </div>
           </footer>
         </div>
       </body>

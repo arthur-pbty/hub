@@ -1,11 +1,31 @@
 services:
-  web:
-    build: .
+  hub-dev:
+    profiles: ["dev"]
+    build:
+      context: .
+      target: dev
+    container_name: hub-dev
     ports:
       - "3000:3000"
     volumes:
-      - ./:/app
+      - .:/app
       - /app/node_modules
+      - /app/.next
     environment:
-      - NODE_ENV=development
-    command: npm run dev
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_ENV: development
+
+  hub-prod:
+    profiles: ["prod"]
+    build:
+      context: .
+      target: runner
+    container_name: hub-prod
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_ENV: production

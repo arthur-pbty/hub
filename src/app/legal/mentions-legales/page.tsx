@@ -10,8 +10,8 @@ export default function MentionsLegales() {
         <h1 className="text-2xl font-bold mb-4">Mentions légales</h1>
         <p className="mb-2">Conformément à la loi, voici les informations légales du site arthurp.fr.</p>
         <ul className="mb-4 list-disc pl-6">
-          <li><strong>Éditeur :</strong> Arthur P. (contact via Discord ou formulaire sur le site)</li>
-          <li><strong>Contact :</strong> contact [at] arthurp.fr</li>
+          <li><strong>Éditeur :</strong> Arthur P.</li>
+          <li><strong>Contact :</strong> contact.arthurp.fr ou contact@arthurp.fr</li>
         </ul>
         <p className="text-zinc-500 text-sm">Ce site est un projet personnel, sans but commercial.</p>
       </main>

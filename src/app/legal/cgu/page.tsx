@@ -9,7 +9,7 @@ export default function CGU() {
         </Link>
         <h1 className="text-2xl font-bold mb-4">Conditions Générales d’Utilisation</h1>
         <p className="mb-2">L’utilisation des outils proposés sur arthurp.fr est libre et gratuite. L’éditeur ne saurait être tenu responsable d’un usage inapproprié ou des conséquences liées à l’utilisation des outils.</p>
-        <p className="mb-2">En utilisant ce site, vous acceptez ces conditions. Pour toute question, contactez-moi à contact [at] arthurp.fr.</p>
+        <p className="mb-2">En utilisant ce site, vous acceptez ces conditions. Pour toute question, contactez-moi via contact.arthurp.fr ou par e-mail à contact@arthurp.fr.</p>
       </main>
     </div>
   );

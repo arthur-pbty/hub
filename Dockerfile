@@ -1,34 +1,26 @@
-# === Étape 1 : Build ===
-FROM node:20-alpine AS builder
-
+FROM node:22-alpine AS base
 WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Copier les fichiers de dépendances pour profiter du cache Docker
-COPY package*.json ./
-
-# Installer uniquement ce qu'il faut pour le build
+FROM base AS deps
+COPY package.json package-lock.json ./
 RUN npm ci
 
-# Copier tout le code
+FROM deps AS dev
 COPY . .
+EXPOSE 3000
+CMD ["npm", "run", "dev", "--", "--hostname", "0.0.0.0", "--port", "3000"]
 
-# Build Next.js pour la production
+FROM deps AS builder
+COPY . .
 RUN npm run build
 
-# === Étape 2 : Runner léger ===
-FROM node:20-alpine AS runner
-
-WORKDIR /app
-
-# Copier uniquement ce qui est nécessaire pour la prod
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-
-# Mode production
+FROM base AS runner
 ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
+ENV PORT=3000
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 EXPOSE 3000
-
-# Lancer le serveur Next.js
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
