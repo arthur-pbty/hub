@@ -44,6 +44,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6938358002331071"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-zinc-900`}>
         <JsonLd
           data={{
