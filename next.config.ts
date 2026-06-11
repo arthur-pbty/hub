@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
 
   // Compression des pages côté serveur (gzip/brotli)
   compress: true,
+  
+  poweredByHeader: false,
 };
 
 export default nextConfig;
